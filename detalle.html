@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -15,6 +16,7 @@
     <script src="https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js"></script>
     <title>Detalle</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaquery.css">
 </head>
 
 <body id="page-detalle">
@@ -24,11 +26,11 @@
                 <!--PAGE TABS-->
                 <div id="tab-page-selector">
                     <ul>
-                        <li><a href="#" id="tab-page-1" class="active"><span>1</span> Punto de Venta</a></li>
-                        <li><a href="#" id="tab-page-2"><span>2</span> Cliente</a></li>
-                        <li><a href="#" id="tab-page-3"><span>3</span> Pedido</a></li>
-                        <li><a href="#" id="tab-page-4"><span>4</span> Asesor Virtual</a></li>
-                        <li><a href="#" id="tab-page-5"><span>5</span> Pago</a></li>
+                        <li><a href="#" id="tab-page-1" class="active"><span class="number">1</span> <span class="title">Punto de Venta</span></a></li>
+                        <li><a href="#" id="tab-page-2"><span class="number">2</span> <span class="title">Cliente</span></a></li>
+                        <li><a href="#" id="tab-page-3"><span class="number">3</span> <span class="title">Pedido</span></a></li>
+                        <li><a href="#" id="tab-page-4"><span class="number">4</span> <span class="title">Asesor Virtual</span></a></li>
+                        <li><a href="#" id="tab-page-5"><span class="number">5</span> <span class="title">Pago</span></a></li>
                     </ul>
                     <div class="clearfix"></div>
                 </div>
@@ -95,10 +97,10 @@
                     </div>
                     <div class="footer">
                         <div class="row">
-                            <div class="col-md-6 text-left">
+                            <div class="col-md-6 col-xs-6 text-left">
                                 <button type="button" class="btn btn-cancel" id="btn-cancel">Cancelar</button>
                             </div>
-                            <div class="col-md-6 text-right">
+                            <div class="col-md-6 col-xs-6 text-right">
                                 <button type="button" class="btn btn-next" id="btn-next">Siguiente</button>
                             </div>
                         </div>
@@ -285,10 +287,10 @@
                     </div>
                     <div class="footer">
                         <div class="row">
-                            <div class="col-md-6 text-left">
+                            <div class="col-md-6 col-xs-4 text-left">
                                 <button type="button" class="btn btn-cancel" id="btn-cancel">Cancelar</button>
                             </div>
-                            <div class="col-md-6 text-right">
+                            <div class="col-md-6 col-xs-8 text-right">
                                 <button type="button" class="btn btn-back" id="btn-back" onclick="backPage('page-2', 'page-1')">Atrás</button>
                                 <button type="button" class="btn btn-next" id="btn-next" disabled="disabled">Siguiente</button>
                             </div>
@@ -392,10 +394,10 @@
                     </div>
                     <div class="footer">
                         <div class="row">
-                            <div class="col-md-6 text-left">
+                            <div class="col-md-6 col-xs-4 text-left">
                                 <button type="button" class="btn btn-cancel" id="btn-cancel">Cancelar</button>
                             </div>
-                            <div class="col-md-6 text-right">
+                            <div class="col-md-6 col-xs-8 text-right">
                                 <button type="button" class="btn btn-back" id="btn-back" onclick="backPage('page-3', 'page-2')">Atrás</button>
                                 <button type="button" class="btn btn-next" id="btn-next">Siguiente</button>
                             </div>
@@ -440,10 +442,10 @@
                                         <picture><img src="https://placeimg.com/640/480/tech" alt="imagen" class="img-responsive"></picture>
                                         <div class="col-md-12"><h2>Nombre del producto</h2></div>
                                         <div class="btn-container">
-                                            <div class="col-md-6 text-left">
+                                            <div class="col-md-6 col-xs-6 text-left">
                                                 <a href="#" class="btn btn-add" data-price-unit="S/ 100.00" data-dscto="S/ 5.00" data-stock="10" data-id="1001" data-name="Nombre del producto">Agregar</a>
                                             </div>
-                                            <div class="col-md-6 text-right">
+                                            <div class="col-md-6 col-xs-6 text-right">
                                                 <div class="price-unit">
                                                 S/ 100.00
                                                 </div>
@@ -457,10 +459,10 @@
                                         <picture><img src="https://placeimg.com/640/480/tech" alt="imagen" class="img-responsive"></picture>
                                         <div class="col-md-12"><h2>Nombre del producto</h2></div>
                                         <div class="btn-container">
-                                            <div class="col-md-6 text-left">
+                                            <div class="col-md-6 col-xs-6 text-left">
                                                 <a href="#" class="btn btn-add" data-price-unit="S/ 100.00" data-dscto="S/ 5.00" data-stock="10" data-id="1001" data-name="Nombre del producto">Agregar</a>
                                             </div>
-                                            <div class="col-md-6 text-right">
+                                            <div class="col-md-6 col-xs-6 text-right">
                                                 <div class="price-unit">
                                                 S/ 100.00
                                                 </div>
@@ -474,10 +476,10 @@
                                         <picture><img src="https://placeimg.com/640/480/tech" alt="imagen" class="img-responsive"></picture>
                                         <div class="col-md-12"><h2>Nombre del producto</h2></div>
                                         <div class="btn-container">
-                                            <div class="col-md-6 text-left">
+                                            <div class="col-md-6 col-xs-6 text-left">
                                                 <a href="#" class="btn btn-add" data-price-unit="S/ 100.00" data-dscto="S/ 5.00" data-stock="10" data-id="1001" data-name="Nombre del producto">Agregar</a>
                                             </div>
-                                            <div class="col-md-6 text-right">
+                                            <div class="col-md-6 col-xs-6 text-right">
                                                 <div class="price-unit">
                                                 S/ 100.00
                                                 </div>
@@ -491,10 +493,10 @@
                                         <picture><img src="https://placeimg.com/640/480/tech" alt="imagen" class="img-responsive"></picture>
                                         <div class="col-md-12"><h2>Nombre del producto</h2></div>
                                         <div class="btn-container">
-                                            <div class="col-md-6 text-left">
+                                            <div class="col-md-6 col-xs-6 text-left">
                                                 <a href="#" class="btn btn-add" data-price-unit="S/ 100.00" data-dscto="S/ 5.00" data-stock="10" data-id="1001" data-name="Nombre del producto">Agregar</a>
                                             </div>
-                                            <div class="col-md-6 text-right">
+                                            <div class="col-md-6 col-xs-6 text-right">
                                                 <div class="price-unit">
                                                 S/ 100.00
                                                 </div>
@@ -508,10 +510,10 @@
                                         <picture><img src="https://placeimg.com/640/480/tech" alt="imagen" class="img-responsive"></picture>
                                         <div class="col-md-12"><h2>Nombre del producto</h2></div>
                                         <div class="btn-container">
-                                            <div class="col-md-6 text-left">
+                                            <div class="col-md-6 col-xs-6 text-left">
                                                 <a href="#" class="btn btn-add" data-price-unit="S/ 100.00" data-dscto="S/ 5.00" data-stock="10" data-id="1001" data-name="Nombre del producto">Agregar</a>
                                             </div>
-                                            <div class="col-md-6 text-right">
+                                            <div class="col-md-6 col-xs-6 text-right">
                                                 <div class="price-unit">
                                                 S/ 100.00
                                                 </div>
@@ -525,10 +527,10 @@
                     </div>
                     <div class="footer">
                         <div class="row">
-                            <div class="col-md-6 text-left">
+                            <div class="col-md-6 col-xs-4 text-left">
                                 <button type="button" class="btn btn-cancel" id="btn-cancel">Cancelar</button>
                             </div>
-                            <div class="col-md-6 text-right">
+                            <div class="col-md-6 col-xs-8 text-right">
                                 <button type="button" class="btn btn-back" id="btn-back" onclick="backPage('page-4', 'page-3')">Atrás</button>
                                 <button type="button" class="btn btn-next" id="btn-next">Siguiente</button>
                             </div>
@@ -577,10 +579,10 @@
                     </div>
                     <div class="footer">
                         <div class="row">
-                            <div class="col-md-6 text-left">
+                            <div class="col-md-6 col-xs-4 text-left">
                                 <button type="button" class="btn btn-cancel" id="btn-cancel">Cancelar</button>
                             </div>
-                            <div class="col-md-6 text-right">
+                            <div class="col-md-6 col-xs-8 text-right">
                                 <button type="button" class="btn btn-back" id="btn-back" onclick="backPage('page-5', 'page-4')">Atrás</button>
                                 <button type="button" class="btn btn-ordernow" id="btn-ordernow">Realizar pedido</button>
                             </div>
