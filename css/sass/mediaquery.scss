@@ -1,0 +1,50 @@
+@media screen and (max-width: 768px){
+	body {
+		padding: 0;
+		padding-top: 30px;
+		.tabs-page {
+			.tab-page {
+				padding: 15px;
+				.footer {
+					button {
+						padding: 10px 10px;
+						margin-top: 15px;
+						&.btn-back {
+							padding-left: 23px;
+							padding-right: 15px;
+							&:before {
+								left: 14px;
+							}
+						}
+						&.btn-next {
+							padding-right: 23px;
+							&:after{
+								right: 12px
+							}
+						}
+						&.btn-ordernow {
+							padding-right: 40px;
+							&:after{
+								right: 15px
+							}
+						}
+					}
+				}
+				
+			}
+			#table-products {
+				margin-top: 30px;
+			}
+			#tab-page-selector ul li a {
+				padding-left: 15px;
+				padding-right: 15px; 
+				.title {
+					display: none
+				}
+				.number {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}

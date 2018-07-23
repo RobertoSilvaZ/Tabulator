@@ -13,6 +13,9 @@
 		font-weight: 700;
 		margin-top: 0;
 	}
+	h3{
+		font-weight: 700;
+	}
 	p {
 		margin: 0 0 15px
 	}
@@ -53,7 +56,7 @@
 					background-color: #F2F4F7;
 					font-weight: 700;
 					color: #333; 
-					span {
+					.number {
 						padding: 6px 11px;
 						border-radius: 50%;
 						margin-right: 5px; 
