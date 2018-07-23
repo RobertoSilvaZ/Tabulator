@@ -191,7 +191,7 @@
                                 <div class="col-md-4">
                                     <label for="zone">Zona</label>
                                     <br>
-                                    <input type="text" class="form-control" name="zone" id="zone">
+                                    <select class="col-md-12 form-control zone" id="zone" name="zone"></select> 
                                 </div>
                                 <div class="col-md-12">
                                     <label for="address">Dirección</label>
@@ -569,6 +569,21 @@
         ];
         $('.distrit').select2({
             data: distrits,
+            placeholder: {
+                id: '-1',
+                text: 'Selecciona'
+            },
+            allowClear: true
+        });
+
+        var zones = [{ id: 0, text: 'Zona 1' },
+            { id: 1, text: 'Zona 2' },
+            { id: 2, text: 'Zona 3' },
+            { id: 3, text: 'Zona 4' },
+            { id: 4, text: 'Zona 5' }
+        ];
+        $('.zone').select2({
+            data: zones,
             placeholder: {
                 id: '-1',
                 text: 'Selecciona'
