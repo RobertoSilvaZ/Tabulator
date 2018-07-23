@@ -4,6 +4,8 @@ $(document).ready(function() {
 	    event.preventDefault(); 
 	    addProductList();
 	}); 
+	
+	setTitlePage(1);
 
 	$('#tab-page-selector').find('ul').find('li').each(function(idx) {
 		var opts = $(this);
@@ -207,5 +209,19 @@ function activePageTab(page){
 		var pages = $('#page-'+i);
 		hidde(pages);	
 	}
+	var pageActive = page.selector.replace('#page-','');
+	setTitlePage(pageActive);
 	show(page);
+
+}
+
+function setTitlePage(pageActive) {
+	if (window.screen.width < 800) {
+		var pageTitle = $('#tab-page-selector').find('#tab-page-'+pageActive).find('.title').html();
+		if(!$('#page-'+pageActive).find('.body').find('h3').hasClass('pageTitle')) {
+			$('#page-'+pageActive).find('.body').prepend('<h3 class="pageTitle">'+pageTitle+'</h3>');
+		}
+	} else {
+		$('#page-'+pageActive).find('.body').find('h3.pageTitle').remove();
+	}
 }
