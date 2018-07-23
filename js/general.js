@@ -75,8 +75,6 @@ function formatSelect(result) {
             //console.log('skipping row');
             return false;
         }
-        console.log('result');
-        console.log(result);
     }
     return '<div class="row">' +
                  '<div class="col-md-2 text-center search-product-id">' + result.id + '</div>' +
@@ -147,30 +145,6 @@ function addProductList() {
 	var price = select.find('.search-product-price').text();
 	var dscto = select.find('.search-product-dscto').text();
 	setListProduct(id,name,price,dscto,numStock);
-	/*
-	var priceUnitSubTotal = parseFloat(priceUnit-priceDscto).toFixed(2); 
-
-	if(priceUnitSubTotal=='NaN') {
-		alert('Selecciona un producto');
-	} else {
-		if(numStock == 0) {
-			alert('El producto no tiene Stock');
-		} else {
-			$('#table-products-content').css('display', 'block');
-			var table = $("#table-products").find('table').find('tbody');
-			var htmlRow = `<tr id="`+id+`">  
-			                    <td class="text-center">`+id+`</td>
-			                    <td>`+name+`</td>
-			                    <td class="text-right price-unit">`+price+`</td>
-			                    <td class="text-right price-dscto">`+dscto+`</td>
-			                    <td class="text-center"><input type="number" class="form-control quantity" value="1" name="price[`+id+`]" name="price[`+id+`]" max="`+numStock+`" min="1"></td>
-			                    <td class="text-right text-strong sub-total">S/ `+priceUnitSubTotal+`</td>
-			                    <td class="text-center"><a href="#" class="btn btn-delete" title="Borrar de la lista">Borrar</a></td>
-			                </tr>`;
-			table.html(table.html()+htmlRow);
-			calculateSubTotalRow();
-		}
-	}*/
 }
 
 function setListProduct(id,name,price,dscto,numStock) {
@@ -219,7 +193,6 @@ function activePageTabHeader(page) {
 		pageTab = page.selector;
 		pageTab = pageTab.replace('#page-',''); 
 	}
-	console.log(pageTab)
 	$('#tab-page-selector').find('ul').find('li').find('a').removeClass('active')
 	$('#tab-page-selector').find('ul').find('li').find('a#tab-page-'+pageTab).addClass('active');
 }
