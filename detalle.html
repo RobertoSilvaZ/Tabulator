@@ -406,10 +406,26 @@
                             </div>
                         </div>
                         <!--Lista de productos-->
+                        <!--Filtros-->
                         <div class="row">
                             <div class="col-md-12">
                                 <h1>Lista de productos sugeridos</h1>
-                                </div>
+                                </div>                        
+                            <div class="col-md-6">
+                                <label for="family">Familia</label>
+                                <br>
+                                <select class="col-md-12 form-control family" id="family" name="family"></select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="category">Categoría</label>
+                                <br>
+                                <select class="col-md-12 form-control category" id="category" name="category"></select> 
+                            </div>
+                            <div class="clearfix"></div>
+                            <br> 
+                        </div>
+                        <!--Lista-->
+                        <div class="row mt-30">
                             <div class="items">
                                 <div class="col-md-3">
                                     <div class="item">
@@ -660,6 +676,34 @@
                 text: 'Selecciona'
             },
             allowClear: true
+        });
+
+        var families = [{ id: 0, text: 'Familia 1' },
+            { id: 1, text: 'Familia 2' },
+            { id: 2, text: 'Familia 3' },
+            { id: 3, text: 'Familia 4' },
+            { id: 4, text: 'Familia 5' }
+        ];
+        $('.family').select2({
+            data: families,
+            placeholder: {
+                id: '-1',
+                text: 'Selecciona'
+            }
+        });
+
+        var categories = [{ id: 0, text: 'Categoría 1' },
+            { id: 1, text: 'Categoría 2' },
+            { id: 2, text: 'Categoría 3' },
+            { id: 3, text: 'Categoría 4' },
+            { id: 4, text: 'Categoría 5' }
+        ];
+        $('.category').select2({
+            data: categories,
+            placeholder: {
+                id: '-1',
+                text: 'Selecciona'
+            }
         });
 
         var products = [{ id: 1, text: '1 - Producto 1', name: 'Producto 1', stock: '<span class="text-warning">0 unids.</span>', price: 'S/ 105.00', dscto: 'S/ 5.00' },
