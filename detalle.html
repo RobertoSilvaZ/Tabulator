@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js"></script>
+    <title>Detalle</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="page-detalle">
+    <div class="container">
+        <form action="/" method="get" accept-charset="utf-8">
+            <div class="tabs-page">
+                <!--PAGE TABS-->
+                <div id="tab-page-selector">
+                    <ul>
+                        <li><a href="#" id="tab-page-1" class="active"><span>1</span> Punto de Venta</a></li>
+                        <li><a href="#" id="tab-page-2"><span>2</span> Cliente</a></li>
+                        <li><a href="#" id="tab-page-3"><span>3</span> Pedido</a></li>
+                        <li><a href="#" id="tab-page-4"><span>4</span> Asesor Virtual</a></li>
+                        <li><a href="#" id="tab-page-5"><span>5</span> Pago</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <!--PAGE 1-->
+                <div class="tab-page" id="page-1">
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>Información de la empresa</h1></div>
+                            <div class="col-md-6">
+                                <label>Punto de venta</label>
+                                <p>Este es un punto de venta</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Empresa</label>
+                                <p>Empresa SRL</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Almacen</label>
+                                <p>Nombre del almacen</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Serie</label>
+                                <p>1021515121</p>
+                            </div>
+                            <div class="clearfix separator"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>Dirección</h1></div>
+                            <div class="col-md-3">
+                                <label>País</label>
+                                <p>Perú</p>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Región</label>
+                                <p>Lima</p>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Departamento</label>
+                                <p>Lima</p>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Provincia</label>
+                                <p>Lima</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Distrito</label>
+                                <p>Cercado de Lima</p>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Dirección</label>
+                                <p>Av. San Martin 123 Torre 2, Piso 213</p>
+                            </div>
+                            <div class="clearfix separator"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>Mensaje administrativo</h1></div>
+                            <div class="col-md-12">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis expedita repellat vero animi aperiam sint iure cumque, obcaecati, ea assumenda voluptate ab nulla fuga deleniti nobis blanditiis, earum qui neque.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="row">
+                            <div class="col-md-6 text-left">
+                                <button type="button" class="btn btn-cancel" id="btn-cancel">Cancelar</button>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <button type="button" class="btn btn-next" id="btn-next">Siguiente</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--PAGE 2-->
+                <div class="tab-page" id="page-2" style="display: none">
+                    <div class="body">
+                        <div class="row" id="search-content">
+                            <div class="col-md-12">
+                                <label class="h1">Buscar cliente</label>
+                                <div class=" ">
+                                    <div class="col-md-6 pl-0 pr-0">
+                                        <input type="search" name="search_custom" id="search_custom" class="form-control" placeholder="Ingresa un Nombre, DNI o RUC">
+                                    </div>
+                                    <div class="col-md-6 pl-0 pr-0">
+                                        <button type="button" class="btn btn-primary" id="searchCustomer"><i class="fa fa-search" aria-hidden="true"></i> Buscar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix separator"></div>
+                        </div>
+                        <div id="search-result-content" style="display: none">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h1>Información del cliente</h1></div>
+                                <div class="col-md-4">
+                                    <label>Nombre</label>
+                                    <p>Rolan Javier Perez Herrera</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Identificación</label>
+                                    <p>RUC: 1010225521</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Razón Social</label>
+                                    <p>Asesores y especialistas en tecnologías de información s.a.c.</p>
+                                </div>
+                                <div class="clearfix separator"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h1>Información del crédito</h1></div>
+                                <div class="col-md-3">
+                                    <label>Tipo de cliente</label>
+                                    <p>Tercero</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Crédito</label>
+                                    <p>S/ 1900.00</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Deuda</label>
+                                    <p class="text-warning">S/ 400.00</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Crédito disponible</label>
+                                    <p class="text-success">S/ 1500.00</p>
+                                </div>
+                                <div class="clearfix separator"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h1>Dirección de envío</h1></div>
+                                <div class="col-md-4">
+                                    <label for="country">País</label>
+                                    <br>
+                                    <select class="col-md-12 form-control country" id="country" name="country"></select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="region">Región</label>
+                                    <br>
+                                    <select class="col-md-12 form-control region" id="region" name="region"></select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="apartment">Departamento</label>
+                                    <br>
+                                    <select class="col-md-12 form-control apartment" id="apartment" name="apartment"></select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="province">Provincia</label>
+                                    <br>
+                                    <select class="col-md-12 form-control province" id="province" name="province"></select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="distrit">Distrito</label>
+                                    <br>
+                                    <select class="col-md-12 form-control distrit" id="distrit" name="distrit"></select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="zone">Zona</label>
+                                    <br>
+                                    <input type="text" class="form-control" name="zone" id="zone">
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="address">Dirección</label>
+                                    <textarea name="address" class="form-control"></textarea>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="phone">Teléfono de contacto</label>
+                                    <input type="text" name="phone" class="form-control">
+                                </div>
+                                <div class="clearfix separator"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h1>Mensaje administrativo</h1></div>
+                                <div class="col-md-12">
+                                    <textarea name="editor1" class="ckeditor"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="row">
+                            <div class="col-md-6 text-left">
+                                <button type="button" class="btn btn-cancel" id="btn-cancel">Cancelar</button>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <button type="button" class="btn btn-back" id="btn-back" onclick="backPage('page-2', 'page-1')">Atrás</button>
+                                <button type="button" class="btn btn-next" id="btn-next" disabled="disabled">Siguiente</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--PAGE 3-->
+                <div class="tab-page" id="page-3" style="display: none">
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>Buscar producto:</h1>
+                                <div class="search-product-content">
+                                    <div class="col-md-10 ml-0 mr-0 pl-0 pr-0">
+                                        <select class="form-control search-product" id="search-product" name="search-product">
+                                            <option></option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 ml-0 mr-0 pl-0 pr-0">
+                                        <button type="button" class="btn btn-add-product" id="btn-add-product"><i class="fa fa-plus-circle" aria-hidden="true"></i> Agregar</button>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div id="table-products-content" style="display: none">
+                                    <h1><br>Listado de artículos de mi pedido:</h1>
+                                    <div id="table-products" class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th width="8%" class="text-center" scope="col">Código</th>
+                                                    <th scope="col">Producto</th>
+                                                    <th width="12%" class="text-right" scope="col">Precio Unit.</th>
+                                                    <th width="10%" class="text-right" scope="col">Descuento</th>
+                                                    <th width="10%" class="text-center" scope="col">Cantidad</th>
+                                                    <th width="10%" class="text-right" scope="col">Sub-Total</th>
+                                                    <th width="4%" class="text-center" scope="col">&nbsp;</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="5" class="text-right bl-0 bb-0">Total</td>
+                                                    <td class="text-right text-strong ">S/ 100.00</td>
+                                                    <td class="br-0 bb-0">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5" class="text-right bl-0 bb-0">Total con descuento</td>
+                                                    <td class="text-right text-strong ">S/ 100.00</td>
+                                                    <td class="br-0 bb-0">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5" class="text-right bl-0 bb-0">Total sin descuento</td>
+                                                    <td class="text-right text-strong ">S/ 100.00</td>
+                                                    <td class="br-0 bb-0">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5" class="text-right bl-0 bb-0">Valor Neto</td>
+                                                    <td class="text-right text-strong ">S/ 100.00</td>
+                                                    <td class="br-0 bb-0">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5" class="text-right bl-0 bb-0">Impuesto</td>
+                                                    <td class="text-right text-strong ">S/ 100.00</td>
+                                                    <td class="br-0 bb-0">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5" class="text-right bl-0 bb-0">Flete</td>
+                                                    <td class="text-right text-strong ">S/ 100.00</td>
+                                                    <td class="br-0 bb-0">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5" class="text-right bl-0 bb-0">Total a pagar</td>
+                                                    <td class="text-right text-strong ">S/ 100.00</td>
+                                                    <td class="br-0 bb-0">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5" class="text-right bl-0 bb-0">Percepcón</td>
+                                                    <td class="text-right text-strong ">S/ 100.00</td>
+                                                    <td class="br-0 bb-0">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5" class="text-right bl-0 bb-0">Total a Facturar</td>
+                                                    <td class="text-right text-strong ">S/ 100.00</td>
+                                                    <td class="br-0 bb-0">&nbsp;</td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="row">
+                            <div class="col-md-6 text-left">
+                                <button type="button" class="btn btn-cancel" id="btn-cancel">Cancelar</button>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <button type="button" class="btn btn-back" id="btn-back" onclick="backPage('page-3', 'page-2')">Atrás</button>
+                                <button type="button" class="btn btn-next" id="btn-next">Siguiente</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--PAGE 4-->
+                <div class="tab-page" id="page-4" style="display: none">
+                    <div class="body">
+                        <!--Si no existe-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-success" role="alert">
+                                    <p><i class="fa fa-info-circle" aria-hidden="true"></i> Por el momento no hay productos sugeridos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Lista de productos-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>Lista de productos sugeridos</h1>
+                                </div>
+                            <div class="items">
+                                <div class="col-md-3">
+                                    <div class="item">
+                                        <picture><img src="https://placeimg.com/640/480/tech" alt="imagen" class="img-responsive"></picture>
+                                        <div class="col-md-12"><h2>Nombre del producto</h2></div>
+                                        <div class="btn-container">
+                                            <div class="col-md-6 text-left">
+                                                <a href="#" class="btn btn-add" data-price-unit="S/ 100.00" data-dscto="S/ 5.00" data-stock="10" data-id="1001" data-name="Nombre del producto">Agregar</a>
+                                            </div>
+                                            <div class="col-md-6 text-right">
+                                                <div class="price-unit">
+                                                S/ 100.00
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="item">
+                                        <picture><img src="https://placeimg.com/640/480/tech" alt="imagen" class="img-responsive"></picture>
+                                        <div class="col-md-12"><h2>Nombre del producto</h2></div>
+                                        <div class="btn-container">
+                                            <div class="col-md-6 text-left">
+                                                <a href="#" class="btn btn-add" data-price-unit="S/ 100.00" data-dscto="S/ 5.00" data-stock="10" data-id="1001" data-name="Nombre del producto">Agregar</a>
+                                            </div>
+                                            <div class="col-md-6 text-right">
+                                                <div class="price-unit">
+                                                S/ 100.00
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="item">
+                                        <picture><img src="https://placeimg.com/640/480/tech" alt="imagen" class="img-responsive"></picture>
+                                        <div class="col-md-12"><h2>Nombre del producto</h2></div>
+                                        <div class="btn-container">
+                                            <div class="col-md-6 text-left">
+                                                <a href="#" class="btn btn-add" data-price-unit="S/ 100.00" data-dscto="S/ 5.00" data-stock="10" data-id="1001" data-name="Nombre del producto">Agregar</a>
+                                            </div>
+                                            <div class="col-md-6 text-right">
+                                                <div class="price-unit">
+                                                S/ 100.00
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="item">
+                                        <picture><img src="https://placeimg.com/640/480/tech" alt="imagen" class="img-responsive"></picture>
+                                        <div class="col-md-12"><h2>Nombre del producto</h2></div>
+                                        <div class="btn-container">
+                                            <div class="col-md-6 text-left">
+                                                <a href="#" class="btn btn-add" data-price-unit="S/ 100.00" data-dscto="S/ 5.00" data-stock="10" data-id="1001" data-name="Nombre del producto">Agregar</a>
+                                            </div>
+                                            <div class="col-md-6 text-right">
+                                                <div class="price-unit">
+                                                S/ 100.00
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="item">
+                                        <picture><img src="https://placeimg.com/640/480/tech" alt="imagen" class="img-responsive"></picture>
+                                        <div class="col-md-12"><h2>Nombre del producto</h2></div>
+                                        <div class="btn-container">
+                                            <div class="col-md-6 text-left">
+                                                <a href="#" class="btn btn-add" data-price-unit="S/ 100.00" data-dscto="S/ 5.00" data-stock="10" data-id="1001" data-name="Nombre del producto">Agregar</a>
+                                            </div>
+                                            <div class="col-md-6 text-right">
+                                                <div class="price-unit">
+                                                S/ 100.00
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="row">
+                            <div class="col-md-6 text-left">
+                                <button type="button" class="btn btn-cancel" id="btn-cancel">Cancelar</button>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <button type="button" class="btn btn-back" id="btn-back" onclick="backPage('page-4', 'page-3')">Atrás</button>
+                                <button type="button" class="btn btn-next" id="btn-next">Siguiente</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--PAGE 5-->
+                <div class="tab-page" id="page-5" style="display: none">
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>Total a pagar</h1></div>
+                            <div class="col-md-3">
+                                <label>Monto de la orden</label>
+                                <p>S/ 200.00</p>
+                            </div>
+                            <div class="col-md-3">
+                                <label>SUNAT</label>
+                                <p>S/ 25.00</p>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Flete</label>
+                                <p>S/ 20.00</p>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Uso de crédito</label>
+                                <p>S/ 245.00</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-success" role="alert">
+                                    <p><i class="fa fa-info-circle" aria-hidden="true"></i> Te falta depósitar en el banco</p>
+                                    <div class="mount h1">S/ 200.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>Mensaje administrativo</h1></div>
+                            <div class="col-md-12">
+                                <textarea name="editor1" class="ckeditor"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="row">
+                            <div class="col-md-6 text-left">
+                                <button type="button" class="btn btn-cancel" id="btn-cancel">Cancelar</button>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <button type="button" class="btn btn-back" id="btn-back" onclick="backPage('page-5', 'page-4')">Atrás</button>
+                                <button type="button" class="btn btn-ordernow" id="btn-ordernow">Realizar pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="js/general.js" type="text/javascript"></script>
+    <script src="js/javascript.js" type="text/javascript"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var countries = [{ id: 0, text: 'País 1' },
+            { id: 1, text: 'País 2' },
+            { id: 2, text: 'País 3' },
+            { id: 3, text: 'País 4' },
+            { id: 4, text: 'País 5' }
+        ];
+        $('.country').select2({
+            data: countries,
+            placeholder: {
+                id: '-1',
+                text: 'Selecciona'
+            },
+            allowClear: true
+        });
+
+        var regions = [{ id: 0, text: 'Región 1' },
+            { id: 1, text: 'Región 2' },
+            { id: 2, text: 'Región 3' },
+            { id: 3, text: 'Región 4' },
+            { id: 4, text: 'Región 5' }
+        ];
+        $('.region').select2({
+            data: regions,
+            placeholder: {
+                id: '-1',
+                text: 'Selecciona'
+            },
+            allowClear: true
+        });
+
+        var apartments = [{ id: 0, text: 'Departamento 1' },
+            { id: 1, text: 'Departamento 2' },
+            { id: 2, text: 'Departamento 3' },
+            { id: 3, text: 'Departamento 4' },
+            { id: 4, text: 'Departamento 5' }
+        ];
+        $('.apartment').select2({
+            data: apartments,
+            placeholder: {
+                id: '-1',
+                text: 'Selecciona'
+            },
+            allowClear: true
+        });
+
+        var provinces = [{ id: 0, text: 'Provincia 1' },
+            { id: 1, text: 'Provincia 2' },
+            { id: 2, text: 'Provincia 3' },
+            { id: 3, text: 'Provincia 4' },
+            { id: 4, text: 'Provincia 5' }
+        ];
+        $('.province').select2({
+            data: provinces,
+            placeholder: {
+                id: '-1',
+                text: 'Selecciona'
+            },
+            allowClear: true
+        });
+
+        var distrits = [{ id: 0, text: 'Distrito 1' },
+            { id: 1, text: 'Distrito 2' },
+            { id: 2, text: 'Distrito 3' },
+            { id: 3, text: 'Distrito 4' },
+            { id: 4, text: 'Distrito 5' }
+        ];
+        $('.distrit').select2({
+            data: distrits,
+            placeholder: {
+                id: '-1',
+                text: 'Selecciona'
+            },
+            allowClear: true
+        });
+
+        var products = [{ id: 1, text: '1 - Producto 1', name: 'Producto 1', stock: '<span class="text-warning">0 unids.</span>', price: 'S/ 105.00', dscto: 'S/ 5.00' },
+            { id: 2, text: '2 - Producto 2', name: 'Producto 2', stock: '<span class="text-success">10 unids.</span>', price: 'S/ 85.99', dscto: '<span class="text-disabled">S/ 0.00</span>' },
+            { id: 3, text: '3 - Producto 3', name: 'Producto 3', stock: '<span class="text-success">6 unids.</span>', price: 'S/ 25.99', dscto: '<span class="text-disabled">S/ 0.00</span>' },
+            { id: 4, text: '4 - Producto 4', name: 'Producto 4', stock: '<span class="text-warning">0 unids.</span>', price: 'S/ 9.99', dscto: '<span class="text-disabled">S/ 0.00</span>' },
+            { id: 5, text: '5 - Producto 5', name: 'Producto 5', stock: '<span class="text-success">2 unids.</span>', price: 'S/ 100.00', dscto: 'S/ 10.00' }
+        ];
+        $('.search-product').select2({
+            data: products,
+            width: '100%',
+            templateResult: formatSelect,
+            templateSelection: formatSelect,
+            escapeMarkup: function(m) { return m; },
+            matcher: matcher
+        });
+
+    });
+    </script>
+</body>
+
+</html>
